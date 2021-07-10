@@ -1,0 +1,30 @@
+﻿<Window xmlns:ui="http://schemas.modernwpf.com/2019"
+        ui:WindowHelper.UseModernWindowStyle="True"
+        x:Class="BMI_Calculator.Views.ShellView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BMI_Calculator.Views"
+        mc:Ignorable="d"
+        Title="ShellView" Height="1100" Width="350">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="20" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Column="1" Grid.Row="1">
+            <Run Text="BMI Calculator" FontSize="40"/>
+        </TextBlock>
+        <ContentControl Grid.Column="1" Grid.Row="2" Grid.RowSpan="8"  
+                        x:Name="ActiveItem" />
+    </Grid>
+</Window>
